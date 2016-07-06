@@ -1,0 +1,11 @@
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\bin\Debug\IDOCalls.exe.config
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\bin\Debug\IDOCalls.exe
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\bin\Debug\IDOCalls.pdb
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.Form1.resources
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.Properties.Resources.resources
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.csproj.GenerateResource.Cache
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.exe
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.pdb
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.csprojResolveAssemblyReference.cache
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\bin\Debug\WSFormServerProtocol.dll
+c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\bin\Debug\WSEnums.dll
