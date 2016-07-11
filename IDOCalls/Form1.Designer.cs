@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtSessionToken = new System.Windows.Forms.TextBox();
-            this.btnConnectToSyteline = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -37,28 +36,17 @@
             // 
             // txtSessionToken
             // 
-            this.txtSessionToken.Location = new System.Drawing.Point(329, 84);
+            this.txtSessionToken.Location = new System.Drawing.Point(434, 63);
             this.txtSessionToken.Margin = new System.Windows.Forms.Padding(6);
             this.txtSessionToken.Multiline = true;
             this.txtSessionToken.Name = "txtSessionToken";
-            this.txtSessionToken.Size = new System.Drawing.Size(270, 86);
+            this.txtSessionToken.Size = new System.Drawing.Size(846, 86);
             this.txtSessionToken.TabIndex = 8;
-            // 
-            // btnConnectToSyteline
-            // 
-            this.btnConnectToSyteline.Location = new System.Drawing.Point(38, 63);
-            this.btnConnectToSyteline.Margin = new System.Windows.Forms.Padding(6);
-            this.btnConnectToSyteline.Name = "btnConnectToSyteline";
-            this.btnConnectToSyteline.Size = new System.Drawing.Size(322, 44);
-            this.btnConnectToSyteline.TabIndex = 9;
-            this.btnConnectToSyteline.Text = "Connect to Syteline";
-            this.btnConnectToSyteline.UseVisualStyleBackColor = true;
-            this.btnConnectToSyteline.Click += new System.EventHandler(this.btnConnectToSyteline_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(464, 32);
+            this.label5.Location = new System.Drawing.Point(429, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 25);
@@ -69,7 +57,6 @@
             // 
             this.groupBox1.Controls.Add(this.txtSessionToken);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.btnConnectToSyteline);
             this.groupBox1.Location = new System.Drawing.Point(24, 54);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
@@ -91,7 +78,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IDO via WebService";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -101,7 +87,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtSessionToken;
-        private System.Windows.Forms.Button btnConnectToSyteline;
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
