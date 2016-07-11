@@ -30,16 +30,20 @@ namespace IDOCalls
             return webService.CreateSessionToken("idotest", "dnetpvcomm", "01 DEV GR Mansfield");
         }
 
+        public System.Data.DataSet getCustomers()
+        {
+            string propertyList = "site, cust_num, name";
+            return getIdoDataset("SLCustomerAlls", propertyList);
+        }
+
         public System.Data.DataSet getIdoDataset(string idoName, string propertyList, string filter = "123")
         {
             System.Data.DataSet IdoDataSet = webService.LoadDataSet(
                 sessionToken,
-                "SL.SLCoitems",
-                "Item, Description",
-                "co_num = " + (char)39 + filter + (char)39 + " and co_line = " + (char)39 + filter + (char)39,
-                "", "", 
-                -1
-                );
+                idoName,
+                propertyList,
+                "", "", "", -1 
+                ); // Redefine these as needed
             Debug.WriteLine(IdoDataSet);
             return IdoDataSet;
         }
