@@ -20,9 +20,12 @@ C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\obj\Debug\IDOCalls.csproj
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\obj\Debug\IDOCalls.Form1.resources
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\obj\Debug\IDOCalls.Properties.Resources.resources
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\obj\Debug\IDOCalls.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\bin\Debug\CsQuery.dll
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\bin\Debug\Nancy.dll
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\bin\Debug\Nancy.Testing.dll
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\bin\Debug\CsQuery.xml
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\bin\Debug\Nancy.xml
 C:\Users\sergio_101\Documents\GitHub\IDOCalls\IDOCalls\bin\Debug\Nancy.Testing.xml
+=======
+>>>>>>> origin/master
