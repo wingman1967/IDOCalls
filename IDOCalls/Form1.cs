@@ -29,6 +29,17 @@ namespace IDOCalls
             txtSessionToken.Text = idoConnect.sessionToken;
         }
 
-
+        private void btnGetCustomers_Click(object sender, EventArgs e)
+        {
+            string customerList = "";
+            this.callResults.Text = "";
+           System.Data.DataSet results = idoConnect.getCustomers();
+            for(int i = 0; i < results.Tables[0].Rows.Count; i++ )
+            {
+                customerList += results.Tables[0].Rows[i]["Name"].ToString() + "\r\n";
+            }
+            this.callResults.Text = customerList;
+        }
     }
+
 }

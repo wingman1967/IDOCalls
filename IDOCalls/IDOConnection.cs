@@ -32,19 +32,17 @@ namespace IDOCalls
 
         public System.Data.DataSet getCustomers()
         {
-            string propertyList = "site, cust_num, name";
+            string propertyList = "SiteRef, CustNum, Name";
             return getIdoDataset("SLCustomerAlls", propertyList);
         }
 
-        public System.Data.DataSet getIdoDataset(string idoName, string propertyList, string filter = "123")
+        public System.Data.DataSet getIdoDataset(string idoName, string propertyList, string filter = "")
         {
             System.Data.DataSet IdoDataSet = webService.LoadDataSet(
                 sessionToken,
                 idoName,
                 propertyList,
-                "", "", "", -1 
-                ); // Redefine these as needed
-            Debug.WriteLine(IdoDataSet);
+                "", "", "", -1 ); // Redefine these as needed
             return IdoDataSet;
         }
     }
