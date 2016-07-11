@@ -20,60 +20,22 @@ namespace IDOCalls
 {
     public partial class Form1 : Form
     {
+        public IDOConnection idoConnect;
 
-                
         public Form1()
         {
             InitializeComponent();
-        }
-        
-        
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            lblItem.Text = "NO RECORD";
-            lblDescription.Text = "NO RECORD";
+            idoConnect = new IDOConnection();   
         }
 
-        private void btnGetRecord_Click(object sender, EventArgs e)
+        private void btnConnectToSyteline_Click(object sender, EventArgs e)
         {
-            btnGetRecord.Text = "Please Wait...";
-            btnGetRecord.Enabled = false;
-            btnGetRecord.Refresh();
+            btnConnectToSyteline.Text = "Please Wait...";
+            btnConnectToSyteline.Enabled = false;
+            btnConnectToSyteline.Refresh();
             
-            IDOWebServiceReference.DOWebServiceSoapClient webService = new IDOWebServiceReference.DOWebServiceSoapClient("IDOWebServiceSoap");
-            string SessionToken = webService.CreateSessionToken("idotest", "dnetpvcomm", "01 DEV GR Mansfield");
-            txtSessionToken.Text = SessionToken;
+            txtSessionToken.Text = idoConnect.sessionToken;
 
-            System.Data.DataSet IdoDataSet = webService.LoadDataSet(
-                SessionToken,
-                "SL.SLCoitems",
-                "Item, Description",
-                "co_num = " + (char)39 + txtOrderNumber.Text + (char)39 + " and co_line = " + (char)39 + txtLineNumber.Text + (char)39,
-                "", "", -1
-                );
-
-            lblItem.Text = "NO RECORD";
-            lblDescription.Text = "NO RECORD";
-
-            try
-            {
-                for (int i = 0; i < IdoDataSet.Tables[0].Rows.Count; i++)
-                {
-                    lblItem.Text = IdoDataSet.Tables[0].Rows[i]["Item"].ToString();
-                    lblDescription.Text = IdoDataSet.Tables[0].Rows[i]["Description"].ToString();
-                }
-            }
-            catch (Exception x)
-            {
-                lblItem.Text = "NO RECORD";
-                lblDescription.Text = "NO RECORD";
-            }
-
-            IdoDataSet.Clear();
-
-            btnGetRecord.Text = "Retrieve Record";
-            btnGetRecord.Enabled = true;
-            btnGetRecord.Refresh();
         }
     }
 }
