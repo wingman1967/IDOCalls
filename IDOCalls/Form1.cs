@@ -74,8 +74,8 @@ namespace IDOCalls
             lsvIDO.Columns.Add("Collection Name", 180, HorizontalAlignment.Left);
             lsvIDO.Columns.Add("Property Name", 200, HorizontalAlignment.Left);
             lsvIDO.Columns.Add("Data Type", 180, HorizontalAlignment.Left);
-            lsvIDO.Columns.Add("Property Class", 180, HorizontalAlignment.Left);
             lsvIDO.Columns.Add("SQL Data Type", 120, HorizontalAlignment.Left);
+            lsvIDO.Columns.Add("Property Class", 180, HorizontalAlignment.Left);
 
             //Initialize IDO combobox
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
