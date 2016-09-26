@@ -65,6 +65,8 @@ namespace IDOCalls
             lblStatus.Text = "Session:  CLOSED";
             lblItem.Text = "NO RECORD";
             lblDescription.Text = "NO RECORD";
+            lblItems.Text = "Items: 0";
+            lblSelectedItem.Text = "0";
 
             //Initialize lv
             lsvIDO.View = View.Details;
@@ -114,6 +116,10 @@ namespace IDOCalls
             btnGetRecord.Text = "Please Wait...";
             btnGetRecord.Enabled = false;
             btnGetRecord.Refresh();
+            lblItems.Text = "Items: 0";
+            lblItems.Refresh();
+            lblSelectedItem.Text = "0";
+            int itemIterator = 0;
             
             IDOWebServiceReference.DOWebServiceSoapClient webService = new IDOWebServiceReference.DOWebServiceSoapClient("IDOWebServiceSoap");
             string SessionToken = webService.CreateSessionToken("sa", "mongoose", "01 DEV GR Mansfield");
@@ -139,7 +145,9 @@ namespace IDOCalls
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["DataType"].ToString());
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["ColumnDataType"].ToString());
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["PropertyClass"].ToString());
-
+                        itemIterator += 1;
+                        //lblItems.Text = "Items: " + itemIterator.ToString("###,###,##");
+                        //lblItems.Refresh();
                     }
                 }
                 catch (Exception x)
@@ -169,6 +177,9 @@ namespace IDOCalls
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["DataType"].ToString());
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["ColumnDataType"].ToString());
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["PropertyClass"].ToString());
+                        itemIterator += 1;
+                        //lblItems.Text = "Items: " + itemIterator.ToString("###,###,###,###");
+                        //lblItems.Refresh();
                     }
                 }
                 catch (Exception x)
@@ -182,6 +193,27 @@ namespace IDOCalls
             btnGetRecord.Text = "Retrieve";
             btnGetRecord.Enabled = true;
             btnGetRecord.Refresh();
+
+            lblItems.Text = "Items: " + itemIterator.ToString("###,###,###,###");
+
+            if (itemIterator == 0)
+            {
+                lblItems.Text = "Items: 0";
+            }
+            
+            lblItems.Refresh();
+        }
+
+        private void lsvIDO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lsvIDO.SelectedItems.Count > 0)
+            {
+                var cIndex = lsvIDO.SelectedIndices[0];
+                lblSelectedItem.Text = (cIndex + 1).ToString();
+                //lblSelectedItem.Text = lsvIDO.SelectedIndices[0].ToString();
+                lblSelectedItem.Refresh();
+            }
+            
         }
     }
 }

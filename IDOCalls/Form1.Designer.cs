@@ -42,11 +42,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMG = new System.Windows.Forms.TextBox();
-            this.lsvIDO = new System.Windows.Forms.ListView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cboIDOs = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cboIDOs = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lsvIDO = new System.Windows.Forms.ListView();
+            this.txtMG = new System.Windows.Forms.TextBox();
+            this.lblItems = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblSelectedItem = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,6 +177,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblSelectedItem);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lblItems);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cboIDOs);
             this.groupBox1.Controls.Add(this.label6);
@@ -197,6 +203,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "IDO Test Parameters";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 150);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "IDOs";
+            // 
+            // cboIDOs
+            // 
+            this.cboIDOs.FormattingEnabled = true;
+            this.cboIDOs.Location = new System.Drawing.Point(9, 166);
+            this.cboIDOs.Name = "cboIDOs";
+            this.cboIDOs.Size = new System.Drawing.Size(213, 21);
+            this.cboIDOs.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 202);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "IDO Properties";
+            // 
+            // lsvIDO
+            // 
+            this.lsvIDO.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lsvIDO.ForeColor = System.Drawing.SystemColors.Window;
+            this.lsvIDO.FullRowSelect = true;
+            this.lsvIDO.GridLines = true;
+            this.lsvIDO.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lsvIDO.Location = new System.Drawing.Point(6, 218);
+            this.lsvIDO.MultiSelect = false;
+            this.lsvIDO.Name = "lsvIDO";
+            this.lsvIDO.Size = new System.Drawing.Size(874, 404);
+            this.lsvIDO.TabIndex = 15;
+            this.lsvIDO.UseCompatibleStateImageBehavior = false;
+            this.lsvIDO.SelectedIndexChanged += new System.EventHandler(this.lsvIDO_SelectedIndexChanged);
+            // 
             // txtMG
             // 
             this.txtMG.Location = new System.Drawing.Point(485, 23);
@@ -207,45 +254,33 @@
             this.txtMG.TabIndex = 14;
             this.txtMG.Visible = false;
             // 
-            // lsvIDO
+            // lblItems
             // 
-            this.lsvIDO.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.lsvIDO.ForeColor = System.Drawing.SystemColors.Window;
-            this.lsvIDO.FullRowSelect = true;
-            this.lsvIDO.GridLines = true;
-            this.lsvIDO.Location = new System.Drawing.Point(6, 218);
-            this.lsvIDO.Name = "lsvIDO";
-            this.lsvIDO.Size = new System.Drawing.Size(874, 404);
-            this.lsvIDO.TabIndex = 15;
-            this.lsvIDO.UseCompatibleStateImageBehavior = false;
+            this.lblItems.AutoSize = true;
+            this.lblItems.Location = new System.Drawing.Point(328, 202);
+            this.lblItems.Name = "lblItems";
+            this.lblItems.Size = new System.Drawing.Size(38, 13);
+            this.lblItems.TabIndex = 19;
+            this.lblItems.Text = "Items: ";
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "IDO Properties";
-            this.label6.Visible = false;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(616, 202);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Selected Item:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // cboIDOs
+            // lblSelectedItem
             // 
-            this.cboIDOs.FormattingEnabled = true;
-            this.cboIDOs.Location = new System.Drawing.Point(9, 166);
-            this.cboIDOs.Name = "cboIDOs";
-            this.cboIDOs.Size = new System.Drawing.Size(213, 21);
-            this.cboIDOs.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "IDOs";
-            this.label7.Visible = false;
+            this.lblSelectedItem.AutoSize = true;
+            this.lblSelectedItem.Location = new System.Drawing.Point(697, 202);
+            this.lblSelectedItem.Name = "lblSelectedItem";
+            this.lblSelectedItem.Size = new System.Drawing.Size(25, 13);
+            this.lblSelectedItem.TabIndex = 21;
+            this.lblSelectedItem.Text = "nnn";
             // 
             // Form1
             // 
@@ -288,6 +323,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboIDOs;
+        private System.Windows.Forms.Label lblItems;
+        private System.Windows.Forms.Label lblSelectedItem;
+        private System.Windows.Forms.Label label8;
     }
 }
 
