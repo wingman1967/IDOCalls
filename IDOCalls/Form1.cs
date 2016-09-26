@@ -146,8 +146,6 @@ namespace IDOCalls
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["ColumnDataType"].ToString());
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["PropertyClass"].ToString());
                         itemIterator += 1;
-                        //lblItems.Text = "Items: " + itemIterator.ToString("###,###,##");
-                        //lblItems.Refresh();
                     }
                 }
                 catch (Exception x)
@@ -178,8 +176,6 @@ namespace IDOCalls
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["ColumnDataType"].ToString());
                         lv.SubItems.Add(IdoDataSet.Tables[0].Rows[i]["PropertyClass"].ToString());
                         itemIterator += 1;
-                        //lblItems.Text = "Items: " + itemIterator.ToString("###,###,###,###");
-                        //lblItems.Refresh();
                     }
                 }
                 catch (Exception x)
@@ -210,7 +206,6 @@ namespace IDOCalls
             {
                 var cIndex = lsvIDO.SelectedIndices[0];
                 lblSelectedItem.Text = (cIndex + 1).ToString();
-                //lblSelectedItem.Text = lsvIDO.SelectedIndices[0].ToString();
                 lblSelectedItem.Refresh();
             }
             
