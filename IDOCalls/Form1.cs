@@ -210,5 +210,11 @@ namespace IDOCalls
             }
             
         }
+
+        private void btnSaveDataForm_Click(object sender, EventArgs e)
+        {
+            Form sdf = new savedata(txtSessionToken.Text);
+            sdf.Show();
+        }
     }
 }

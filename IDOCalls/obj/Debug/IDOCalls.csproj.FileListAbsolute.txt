@@ -9,3 +9,4 @@ c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debu
 c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.csprojResolveAssemblyReference.cache
 c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\bin\Debug\WSFormServerProtocol.dll
 c:\users\hinesj\documents\visual studio 2015\Projects\IDOCalls\IDOCalls\bin\Debug\WSEnums.dll
+C:\Users\hinesj\Documents\Visual Studio 2015\Projects\IDOCalls\IDOCalls\obj\Debug\IDOCalls.savedata.resources

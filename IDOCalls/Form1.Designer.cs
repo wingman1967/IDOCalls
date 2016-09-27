@@ -42,14 +42,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblSelectedItem = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblItems = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cboIDOs = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lsvIDO = new System.Windows.Forms.ListView();
             this.txtMG = new System.Windows.Forms.TextBox();
-            this.lblItems = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblSelectedItem = new System.Windows.Forms.Label();
+            this.btnSaveDataForm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,6 +178,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSaveDataForm);
             this.groupBox1.Controls.Add(this.lblSelectedItem);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.lblItems);
@@ -202,6 +204,34 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "IDO Test Parameters";
+            // 
+            // lblSelectedItem
+            // 
+            this.lblSelectedItem.AutoSize = true;
+            this.lblSelectedItem.Location = new System.Drawing.Point(697, 202);
+            this.lblSelectedItem.Name = "lblSelectedItem";
+            this.lblSelectedItem.Size = new System.Drawing.Size(25, 13);
+            this.lblSelectedItem.TabIndex = 21;
+            this.lblSelectedItem.Text = "nnn";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(616, 202);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Selected Item:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblItems
+            // 
+            this.lblItems.AutoSize = true;
+            this.lblItems.Location = new System.Drawing.Point(328, 202);
+            this.lblItems.Name = "lblItems";
+            this.lblItems.Size = new System.Drawing.Size(38, 13);
+            this.lblItems.TabIndex = 19;
+            this.lblItems.Text = "Items: ";
             // 
             // label7
             // 
@@ -254,33 +284,15 @@
             this.txtMG.TabIndex = 14;
             this.txtMG.Visible = false;
             // 
-            // lblItems
+            // btnSaveDataForm
             // 
-            this.lblItems.AutoSize = true;
-            this.lblItems.Location = new System.Drawing.Point(328, 202);
-            this.lblItems.Name = "lblItems";
-            this.lblItems.Size = new System.Drawing.Size(38, 13);
-            this.lblItems.TabIndex = 19;
-            this.lblItems.Text = "Items: ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(616, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Selected Item:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblSelectedItem
-            // 
-            this.lblSelectedItem.AutoSize = true;
-            this.lblSelectedItem.Location = new System.Drawing.Point(697, 202);
-            this.lblSelectedItem.Name = "lblSelectedItem";
-            this.lblSelectedItem.Size = new System.Drawing.Size(25, 13);
-            this.lblSelectedItem.TabIndex = 21;
-            this.lblSelectedItem.Text = "nnn";
+            this.btnSaveDataForm.Location = new System.Drawing.Point(731, 21);
+            this.btnSaveDataForm.Name = "btnSaveDataForm";
+            this.btnSaveDataForm.Size = new System.Drawing.Size(138, 23);
+            this.btnSaveDataForm.TabIndex = 22;
+            this.btnSaveDataForm.Text = "Open Save Data";
+            this.btnSaveDataForm.UseVisualStyleBackColor = true;
+            this.btnSaveDataForm.Click += new System.EventHandler(this.btnSaveDataForm_Click);
             // 
             // Form1
             // 
@@ -311,13 +323,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblItem;
-        private System.Windows.Forms.TextBox txtSessionToken;
         private System.Windows.Forms.Button btnGetRecord;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtMG;
         private System.Windows.Forms.ListView lsvIDO;
         private System.Windows.Forms.Label label6;
@@ -326,6 +336,9 @@
         private System.Windows.Forms.Label lblItems;
         private System.Windows.Forms.Label lblSelectedItem;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSaveDataForm;
+        public System.Windows.Forms.TextBox txtSessionToken;
+        public System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
